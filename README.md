@@ -2,13 +2,13 @@
 
 This project is a complete full-stack application designed for network fault detection and analysis, containing:
 
-1. **Frontend**: A React application built with Vite (`noc-fault-locator`)
-2. **Backend**: An ML-powered FastAPI server (`Tanfinet`)
+1. **Frontend**: A React application built with Vite (`frontend`)
+2. **Backend**: An ML-powered FastAPI server (`backend`)
 
 ## Project Structure
 
-- `/noc-fault-locator`: React (Vite) frontend application.
-- `/Tanfinet`: Python FastAPI backend driving the ML diagnostics.
+- `/frontend`: React (Vite) frontend application.
+- `/backend`: Python FastAPI backend driving the ML diagnostics.
 - `start.ps1`: A unified PowerShell script to launch both the frontend and backend simultaneously for local development.
 
 ## Prerequisites
@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed on your system:
 
 1. Open your terminal and navigate to the backend folder:
    ```bash
-   cd Tanfinet
+   cd backend
    ```
 2. (Optional but recommended) Create and activate a Python virtual environment:
    ```bash
@@ -44,7 +44,7 @@ Before you begin, ensure you have the following installed on your system:
 
 1. Open a new terminal and navigate to the frontend folder:
    ```bash
-   cd noc-fault-locator
+   cd frontend
    ```
 2. Install the necessary Node.js dependencies:
    ```bash
@@ -69,7 +69,7 @@ If you prefer to run them separately or are not on Windows:
 **1. Start the Backend:**
 
 ```bash
-cd Tanfinet
+cd backend
 python -m uvicorn api:app --reload --port 8000
 ```
 
@@ -79,7 +79,7 @@ _The backend will be available at `http://localhost:8000`._
 Open a second terminal window:
 
 ```bash
-cd noc-fault-locator
+cd frontend
 npm run dev
 ```
 
