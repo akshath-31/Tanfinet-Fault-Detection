@@ -13,7 +13,7 @@
     },
     {
       "id": "BLOCK-2",
-      "label": "AGGREGATE BLOCK",
+      "label": "AGGREGATE BLOCK 2",
       "nodeType": "BLOCK",
       "blockType": "AGGREGATE",
       "parentId": "NOC-1",
@@ -24,7 +24,7 @@
     },
     {
       "id": "BLOCK-1",
-      "label": "DISTRIBUTION BLOCK 1",
+      "label": "BLOCK 1",
       "nodeType": "BLOCK",
       "blockType": "DISTRIBUTION",
       "parentId": "BLOCK-2",
@@ -35,7 +35,7 @@
     },
     {
       "id": "BLOCK-3",
-      "label": "DISTRIBUTION BLOCK 3",
+      "label": "BLOCK 3",
       "nodeType": "BLOCK",
       "blockType": "DISTRIBUTION",
       "parentId": "BLOCK-2",

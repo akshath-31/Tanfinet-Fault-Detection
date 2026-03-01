@@ -23,7 +23,7 @@ const MOCK_FAULTS: Fault[] = [
     id: '1',
     fault_layer: 'Block 42',
     segment_type: 'Block',
-    path: 'NOC → Aggregation 3 → Block 42',
+    path: 'NOC → Block 42',
     status: 'Congestion',
     error_type: 'Software',
     detection_time: '2026-02-27 08:42:12',
@@ -32,9 +32,9 @@ const MOCK_FAULTS: Fault[] = [
   },
   {
     id: '2',
-    fault_layer: 'Aggregation 7',
-    segment_type: 'Aggregation',
-    path: 'NOC → Aggregation 7',
+    fault_layer: 'Block 7',
+    segment_type: 'Block',
+    path: 'NOC → Block 7',
     status: 'OLT_Fail',
     error_type: 'Hardware',
     detection_time: '2026-02-27 08:45:00',
@@ -45,7 +45,7 @@ const MOCK_FAULTS: Fault[] = [
     id: '3',
     fault_layer: 'GP-Node-Alpha',
     segment_type: 'GP',
-    path: 'NOC → Aggregation 1 → Block 12 → GP-Node-Alpha',
+    path: 'NOC → Block 12 → GP-Node-Alpha',
     status: 'Fiber_Cut',
     error_type: 'Hardware',
     detection_time: '2026-02-27 08:40:30',
@@ -281,7 +281,7 @@ export default function App() {
                       >
                         <p className="text-xs font-black uppercase opacity-60 mb-1">{layer}</p>
                         <p className="text-2xl font-black uppercase">
-                          {nodeAtLayer ? nodeAtLayer.label : `${layer} Node`}
+                          {isDownstream ? `${layer} Node` : (nodeAtLayer ? nodeAtLayer.label : `${layer} Node`)}
                         </p>
                         {isFaultLayer && (
                           <div className="mt-2 pt-2 border-t border-white/30 text-sm font-bold">

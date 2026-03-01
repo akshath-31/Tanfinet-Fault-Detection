@@ -1,4 +1,4 @@
-export type SegmentType = 'NOC' | 'Aggregation' | 'Block' | 'GP' | 'OLT' | 'ONT';
+export type SegmentType = 'NOC' | 'Block' | 'GP' | 'OLT' | 'ONT';
 
 export interface Fault {
   id: string;
@@ -12,7 +12,7 @@ export interface Fault {
   color: string;
 }
 
-export const NETWORK_HIERARCHY: SegmentType[] = ['NOC', 'Aggregation', 'Block', 'GP', 'OLT', 'ONT'];
+export const NETWORK_HIERARCHY: SegmentType[] = ['NOC', 'Block', 'GP', 'OLT', 'ONT'];
 
 // --- Network Simulation Types ---
 

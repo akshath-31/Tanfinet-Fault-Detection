@@ -18,11 +18,11 @@ const BLOCK_TYPE_COLORS: Record<string, { bg: string; bgMuted: string }> = {
 
 // Size scale per tier
 const NODE_SIZE: Record<NodeType, string> = {
-  NOC:   'w-44 min-h-[7rem]',
-  BLOCK: 'w-40 min-h-[6.5rem]',
-  GP:    'w-36 min-h-[5.5rem]',
-  OLT:   'w-32 min-h-[5rem]',
-  ONT:   'w-28 min-h-[4.5rem]',
+  NOC:   'w-40 min-h-[6.5rem]',
+  BLOCK: 'w-36 min-h-[6rem]',
+  GP:    'w-32 min-h-[5.5rem]',
+  OLT:   'w-28 min-h-[5rem]',
+  ONT:   'w-28 min-h-[5rem]',
 };
 
 function getLedClass(status: NodeStatus): string {
@@ -74,9 +74,6 @@ export default function TopologyNodeCard({ node, nodeRef, onClick, onAnalyse, fa
 
   // Tag label
   let tagLabel: string = node.nodeType;
-  if (node.nodeType === 'BLOCK' && node.blockType) {
-    tagLabel = node.blockType;
-  }
 
   const handleClick = () => {
     if (onClick && cardRef.current) {

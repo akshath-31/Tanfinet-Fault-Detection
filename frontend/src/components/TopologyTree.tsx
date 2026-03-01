@@ -38,7 +38,7 @@ export default function TopologyTree({ nodes, onNodeClick, onAnalyse, faultRootI
           <TopologyNodeCard node={node} onClick={onNodeClick} onAnalyse={onAnalyse} faultRootIds={faultRootIds} />
         </div>
         {childNodes.length > 0 && (
-          <div className="flex flex-row items-start justify-center gap-3 mt-8">
+          <div className="flex flex-row items-start justify-center gap-1.5 mt-6">
             {childNodes.map(child => (
               <div key={child.id} className="flex flex-col items-center">
                 {renderStandardSubtree(child.id)}
@@ -83,7 +83,7 @@ export default function TopologyTree({ nodes, onNodeClick, onAnalyse, faultRootI
           <TopologyNodeCard node={block} onClick={onNodeClick} onAnalyse={onAnalyse} faultRootIds={faultRootIds} />
         </div>
         {gpChildren.length > 0 && (
-          <div className="flex flex-row items-start justify-center gap-3 mt-8">
+          <div className="flex flex-row items-start justify-center gap-1.5 mt-6">
             {gpChildren.map(gp => (
               <div key={gp.id} className="flex flex-col items-center">
                 {renderStandardSubtree(gp.id)}
@@ -109,7 +109,7 @@ export default function TopologyTree({ nodes, onNodeClick, onAnalyse, faultRootI
 
         {/* Block tier — all blocks on the SAME ROW */}
         {aggBlock && (
-          <div className="flex flex-row items-start justify-center gap-6 mt-8">
+          <div className="flex flex-row items-start justify-center gap-2 mt-8">
             {/* Left distribution blocks */}
             {leftBlocks.map(block => renderBlockColumn(block))}
 
@@ -119,7 +119,7 @@ export default function TopologyTree({ nodes, onNodeClick, onAnalyse, faultRootI
                 <TopologyNodeCard node={aggBlock} onClick={onNodeClick} onAnalyse={onAnalyse} faultRootIds={faultRootIds} />
               </div>
               {aggGPs.length > 0 && (
-                <div className="flex flex-row items-start justify-center gap-3 mt-8">
+                <div className="flex flex-row items-start justify-center gap-1.5 mt-6">
                   {aggGPs.map(gp => (
                     <div key={gp.id} className="flex flex-col items-center">
                       {renderStandardSubtree(gp.id)}

@@ -519,9 +519,11 @@ export default function NetworkSimulationPage() {
                         <p className="text-2xl font-black uppercase">
                           {isFaultLayer
                             ? selectedFaultNode.label
-                            : nodeForLayer
-                              ? nodeForLayer.label
-                              : `${layer} Node`
+                            : isDownstream
+                              ? `${layer} Node`
+                              : nodeForLayer
+                                ? nodeForLayer.label
+                                : `${layer} Node`
                           }
                         </p>
                         {isFaultLayer && (
